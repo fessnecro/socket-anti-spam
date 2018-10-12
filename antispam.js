@@ -146,7 +146,7 @@ class SocketAntiSpam {
       }
 
       return resolve(data)
-    })
+    }).catch(e => {})
   }
 
   addSpam(socket) {
@@ -203,7 +203,7 @@ class SocketAntiSpam {
       }).catch(e => {
         return reject(e)
       })
-    })
+    }).catch(e => {})
   }
 
   ban(data, min) {
